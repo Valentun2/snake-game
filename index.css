@@ -1,0 +1,86 @@
+
+body{
+    /* overflow-y: hidden; */
+position: relative;
+    margin: 0;
+}
+button{
+    align-self: flex-end;
+position: absolute;
+bottom: 10px;
+left: calc(50% - 50px);
+padding: 10px 15px;
+border-radius: 12px;
+font-weight: 600;
+}
+
+button:hover{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+.section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.record{
+    margin: 0;
+    color: white;
+position: absolute;
+left: 5px;
+}
+.scores{
+    margin: 0;
+    top:24px;
+    color: white;
+    position: absolute;
+    left: 5px;
+
+}
+
+ .gameBoard{
+    background-color: darkgray;
+display: grid;
+grid-template-rows:repeat(21,1fr) ;
+grid-template-columns:repeat(21,1fr) ;
+
+width: 80vmin;
+height: 80vmin;
+}
+
+.snake-head{
+   z-index: 2;
+    background-color: rgb(0, 0, 128);
+    /* clip-path: polygon(13% 88%, 9% 78%, 5% 64%, 4% 51%, 5% 36%, 9% 19%, 18% 9%, 30% 4%, 46% 2%, 67% 4%, 83% 11%, 89% 20%, 93% 35%, 94% 49%, 94% 62%, 93% 75%, 90% 87%, 87% 100%, 17% 100%); */
+}
+
+.snake{
+
+    background-color: blue;
+    border: .25px solid black;
+}
+
+.food{
+    border: .25px solid black;
+
+     background-color: red;
+     border-radius: 50%;
+}
+
+.game-over{
+    display: none;
+    z-index: 3;
+    position: absolute;
+    top:calc(50% - 25px);
+color: crimson;
+font-size: 44px;
+    left:calc(50% - 105px)
+}
+.game-over.active {
+    display: block;
+}
